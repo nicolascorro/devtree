@@ -1,0 +1,29 @@
+{
+  "name": "devtree",
+  "version": "1.0.0",
+  "description": "First project with Express and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolascorro/devtree.git"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "mongodb",
+    "react",
+    "vite"
+  ],
+  "author": "Nicolás",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolascorro/devtree/issues"
+  },
+  "homepage": "https://github.com/nicolascorro/devtree#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
