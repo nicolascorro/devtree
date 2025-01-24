@@ -8,7 +8,7 @@ server.listen(port, () => {
     console.log(colors.blue.bold(`Server listening in port ${port}.`));
 })
 
-let product={
+let product = {
     id: 1,
     price: 30,
     name: 'Tablet'
