@@ -10,7 +10,7 @@ const router = Router()
 router.post('/auth/register',
     body('handle') // enters the Body of the request and search for the ('handle') key and checks if it's empty
         .notEmpty()
-        .withMessage('The username must not be empty.'),
+        .withMessage('The handle must not be empty.'),
     body('name')
         .notEmpty()
         .withMessage('The name must not be empty.'),

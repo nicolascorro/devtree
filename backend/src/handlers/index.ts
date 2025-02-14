@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express'
 import { validationResult } from 'express-validator'
-import slug from 'slug'
+import slugify from 'slugify'
 import User from "../models/User"
 import { checkPassword, hashPassword } from '../utils/auth'
 
@@ -14,10 +14,10 @@ export const createAccount = async (req: Request, res: Response) => {
         return res.status(409).send({error: err.message})
     }
 
-    const handle = slug(req.body.handle, '')
+    const handle = slugify(req.body.handle, '')
     const handleExists = await User.findOne({handle})
     if (handleExists){
-        const err = new Error('Username not available')
+        const err = new Error('Handle not available')
         return res.status(409).send({error: err.message})
     }
 
