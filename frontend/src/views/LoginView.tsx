@@ -18,7 +18,7 @@ export default function LoginView() {
     const handleLogin = async (formData: LoginForm) => {
         try {
             const { data } = await api.post(`/auth/login`, formData);
-            toast.success(data) // show the success response as a banner
+            localStorage.setItem('AUTH_TOKEN', data) // to save the information in the local browser
 
             reset() // to empty all form data
         } catch (error) {
